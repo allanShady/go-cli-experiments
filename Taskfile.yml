@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  build:
+    desc: build the app
+    cmds:
+    - GOFLAGS=-mod=mod go build -o bin/cli-experiment main.go
+  run:
+    desc: run the app
+    cmds:
+    - GOFLAGS=-mod=mod go run main.go
+  clean:
+    desc: remove all output files
+    cmds:
+    - rm bin/*
